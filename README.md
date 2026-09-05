@@ -2,7 +2,7 @@
 
 > An independent product case study for persistent agent infrastructure. This is **not** an official Dedalus Labs product or roadmap.
 
-[Read the original brief (PDF)](Dedalus_PM_Brief_v2.pdf) · [Opportunity](docs/01-opportunity.md) · [PRD](docs/02-prd.md) · [Metrics & experiments](docs/03-metrics-and-experiments.md) · [Learning log](docs/04-learning-log.md) · [90-day plan](docs/05-90-day-plan.md)
+[Read the original brief (PDF)](Dedalus_PM_Brief_v2.pdf) · [Opportunity](docs/01-opportunity.md) · [PRD](docs/02-prd.md) · [Metrics & experiments](docs/03-metrics-and-experiments.md) · [Learning log](docs/04-learning-log.md) · [90-day plan](docs/05-90-day-plan.md) · [Runnable persistence exercise](prototype/README.md)
 
 ## The one-minute version
 
@@ -29,12 +29,19 @@ Dedalus describes Machines as persistent compute for agents, with an API for run
 | [Metrics & experiments](docs/03-metrics-and-experiments.md) | Clear activation and reliability metrics, plus falsifiable tests |
 | [Learning log](docs/04-learning-log.md) | A reproducible plan to learn the product hands-on and record real observations |
 | [90-day plan](docs/05-90-day-plan.md) | How I would sequence discovery, build, and launch work in an internship |
+| [Persistence exercise](prototype/README.md) | A runnable public-SDK exercise that verifies an artifact persists across separate executions |
 
 ## Product thesis
 
 **If developers can safely checkpoint and inspect agent task state at meaningful boundaries, they will recover from interrupted long-running work faster and trust persistent compute for higher-value workflows.**
 
 A checkpoint should be a product primitive, not a loose collection of files. It needs a stable identity, an explicit lifecycle, guardrails around sensitive data, observable events, and a recovery path that is understandable at 2 a.m.
+
+## Run one real learning exercise
+
+The [persistence exercise](prototype/README.md) uses Dedalus’s public Python SDK to write and retrieve a small task artifact across separate executions on one Machine.
+
+It requires your own API key. Running with `--create-machine` provisions infrastructure and may incur cost, so read the instructions and clean up the Machine when finished. Do not publish your key or any customer data.
 
 ## Scope discipline
 
@@ -48,7 +55,7 @@ This is a **proposal**, not a claim that I have access to Dedalus’s internal s
 ## Next evidence I will add
 
 1. Complete the public Machines quickstart and publish observations in the learning log.
-2. Run a small persistence/recovery exercise with a real agent task and record the setup, command, result, and limitations.
+2. Run the persistence/recovery exercise and record the setup, command, result, and limitations.
 3. Conduct a handful of consented developer conversations; publish only anonymized themes and the exact research questions.
 4. Revise the proposal when the evidence disagrees with the thesis.
 
